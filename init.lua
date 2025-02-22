@@ -1,3 +1,10 @@
+vim.g.mapleader = " "
+
+local keymap = vim.keymap
+
+keymap.set("n", "<leader>rs", ":LspRestart<CR>", { desc = "Restart LSP" })
+keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+
 local opt = vim.opt
 
 -- appearance
@@ -52,6 +59,17 @@ require("lazy").setup({
 		priority = 1000,
 		init = function()
 			vim.cmd.colorscheme("sakura")
+
+			local bg = "#191719"
+			local highlights = {
+				WinSeparator = { fg = bg },
+				NvimTreeNormal = { bg = bg },
+			}
+
+			-- set highlight colors
+			for group, colors in pairs(highlights) do
+				vim.api.nvim_set_hl(0, group, colors)
+			end
 		end,
 	},
 	-- treesitter
@@ -229,6 +247,45 @@ require("lazy").setup({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "path" },
+				},
+			})
+		end,
+	},
+	-- file explorer
+	{
+		"nvim-tree/nvim-tree.lua",
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
+			local nvimtree = require("nvim-tree")
+
+			vim.g.loaded_netrw = 1
+			vim.g.loaded_netrwPlugin = 1
+
+			nvimtree.setup({
+				view = {
+					width = 35,
+					side = "right",
+				},
+				filters = {
+					dotfiles = true,
+				},
+				renderer = {
+					root_folder_label = function(path)
+						return vim.fn.fnamemodify(path, ":t")
+					end,
+					icons = {
+						glyphs = {
+							git = {
+								unstaged = "",
+								staged = "",
+								unmerged = "",
+								renamed = "",
+								untracked = "",
+								deleted = "",
+								ignored = "",
+							},
+						},
+					},
 				},
 			})
 		end,
