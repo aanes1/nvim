@@ -291,4 +291,12 @@ require("lazy").setup({
 			})
 		end,
 	},
+	-- terminal
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		opts = {
+			open_mapping = [[<C-b>]],
+		},
+	},
 })
