@@ -8,6 +8,7 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.fillchars = "eob: "
 opt.laststatus = 0
+opt.pumheight = 8
 
 -- tabs & indentation
 opt.tabstop = 4
@@ -23,9 +24,6 @@ vim.opt.smartcase = true
 -- persistent copy & undo
 opt.clipboard = "unnamedplus"
 opt.undofile = true
-
--- fix cmp window size
-opt.pumheight = 8
 
 -- bootstrap lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -44,8 +42,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- setup lazy
 require("lazy").setup({
+	-- gitsigns
+	{ "lewis6991/gitsigns.nvim" },
 	-- colorscheme
 	{
 		"anAcc22/sakura.nvim",
@@ -187,7 +186,7 @@ require("lazy").setup({
 			},
 		},
 	},
-	-- autocompletion
+	-- cmp
 	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -234,5 +233,4 @@ require("lazy").setup({
 			})
 		end,
 	},
-	{ "lewis6991/gitsigns.nvim" },
 })
