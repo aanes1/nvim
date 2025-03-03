@@ -4,10 +4,10 @@ opt.number = true
 opt.cursorline = true
 
 -- tabs & indentation
-opt.tabstop = 4 
-opt.shiftwidth = 4 
+opt.tabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
-opt.autoindent = true 
+opt.autoindent = true
 
 opt.wrap = false
 opt.signcolumn = "yes"
@@ -18,7 +18,7 @@ opt.background = "dark"
 
 -- search
 opt.ignorecase = true
-opt.smartcase = true 
+opt.smartcase = true
 
 -- remove bloat
 opt.fillchars = "eob: "

@@ -20,7 +20,6 @@ return {
 				end
 				map("gd", vim.lsp.buf.definition, "goto definition")
 				map("gD", vim.lsp.buf.declaration, "goto declaration")
-				map("gt", vim.lsp.buf.type_definition, "goto type")
 				map("K", vim.lsp.buf.hover, "show docs")
 				map("J", vim.diagnostic.open_float, "show error")
 			end,
