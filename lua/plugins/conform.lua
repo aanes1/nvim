@@ -24,7 +24,7 @@ return {
 				python = { "isort", "black" },
 			},
 			format_on_save = function(bufnr)
-				if vim.bo[bufnr].filetype == "c" then
+				if vim.bo[bufnr].filetype == "c" or vim.bo[bufnr].filetype == "cpp" then
 					return {
 						timeout_ms = 1000,
 						lsp_format = "never",
