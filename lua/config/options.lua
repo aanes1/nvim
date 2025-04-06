@@ -28,3 +28,7 @@ opt.swapfile = false
 -- persistent copy/undo
 opt.clipboard = "unnamedplus"
 opt.undofile = true
+
+-- smart indentation
+vim.opt.autoindent = true
+vim.opt.smartindent = true
