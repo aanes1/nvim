@@ -11,7 +11,7 @@ git clone https://github.com/aanes1/nvim ~/.config/nvim
 ```toml
 background = "191719"
 macos-titlebar-proxy-icon = "hidden"
-title = ""
+title = " "
 font-family = "Iosevka Nerd Font"
 font-size = 16
 ```
