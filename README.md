@@ -15,3 +15,8 @@ title = ""
 font-family = "Iosevka Nerd Font"
 font-size = 16
 ```
+
+## credits
+
+- config inspired by [josean martinez](https://github.com/josean-dev/dev-environment-files) and [kickstart](https://github.com/nvim-lua/kickstart.nvim).
+- readme design inspired by [nexxeln](https://github.com/nexxeln/nvim).
