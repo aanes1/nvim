@@ -41,5 +41,6 @@ return {
 				dotfiles = true,
 			},
 		})
+		vim.opt.fillchars:append({ vert = " " }) -- remove window seperator
 	end,
 }
