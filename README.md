@@ -11,11 +11,13 @@ git clone https://github.com/aanes1/nvim ~/.config/nvim
 ## ghostty config
 
 ```toml
-background = "191719"
+background = "#191719"
 macos-titlebar-proxy-icon = "hidden"
 title = " "
 font-family = "Iosevka Nerd Font"
 font-size = 16
+background-opacity = 0.75
+background-blur = true
 ```
 
 ## credits
