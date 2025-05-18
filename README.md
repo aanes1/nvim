@@ -1,4 +1,4 @@
-<img src="https://pub-2b4974ece72641b699587bf33c5528fa.r2.dev/nvim.png" alt="nvim" />
+<img src="https://pub-2b4974ece72641b699587bf33c5528fa.r2.dev/nvim-v1.png" alt="nvim" />
 
 ## installation
 
