@@ -16,7 +16,7 @@ macos-titlebar-proxy-icon = "hidden"
 title = " "
 font-family = "Iosevka Nerd Font"
 font-size = 16
-background-opacity = 0.75
+background-opacity = 0.85
 background-blur = true
 ```
 
